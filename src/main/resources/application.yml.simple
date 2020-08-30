@@ -1,0 +1,6 @@
+port: 9989
+aliyun:
+  AccessKeyID: yourAccessKeyID
+  AccessKeySecret: yourAccessKeySecret
+  mainDemain: yourMainDemain
+  subDemain: yourSubDemain
