@@ -76,13 +76,14 @@ public class ServerTimerTask {
     private String getIp() {
         try {
             String newIp = null;
+//            if (index == 0) {
+//                logger.info("访问http://ifconfig.me/ip获取IP中");
+//                newIp = publicNetwork.getPublicIp01();
+//            } else
             if (index == 0) {
-                logger.info("访问http://ifconfig.me/ip获取IP中");
-                newIp = publicNetwork.getPublicIp01();
-            } else if (index == 1) {
                 logger.info("访问http://ipinfo.io/ip获取IP中");
                 newIp = publicNetwork.getPublicIp02();
-            } else if (index == 2) {
+            } else if (index == 1) {
                 logger.info("访问http://www.net.cn/static/customercare/yourip.asp获取IP中");
                 newIp = publicNetwork.getPublicIp03();
                 Pattern pattern = Pattern.compile("((25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\.){3}(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)");
@@ -91,7 +92,7 @@ public class ServerTimerTask {
                     newIp = m.group(0);
                 }
             }
-            index = index == 2 ? 0 : ++index;
+            index = index == 1 ? 0 : ++index;
             return newIp;
         } catch (Exception e) {
             logger.error("获取公网IP出现异常！\n"+e.getMessage());

@@ -11,7 +11,7 @@
     <groupId>com.shun</groupId>
     <artifactId>auto-aliyundns</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>auto-aliyundns</name>
     <description>根据公网ip自动解析阿里云dns</description>
 
